@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 15:16:24 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/15 16:57:57 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/08/15 18:44:53 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ CPPFLAGS	= -MMD
 #                               SOURCE FILES                              	   #
 ################################################################################
 
-SRCS =	main.c
+SRCS =	main.c			\
+		strlen_test.c	\
 
 ################################################################################
 #                               INCLUDES                             	       #
@@ -69,11 +70,12 @@ all	:
 	echo "$(CYAN)"Compilation of $(NAME) in progress... "$(NO_COLOR)"
 	make $(NAME) --no-print-directory && echo "$(GREEN)"$(NAME) -- Compilation complete ! "$(NO_COLOR)" || echo "$(RED)"$(NAME) -- Compilation Failed "$(NO_COLOR)"
 
-$(NAME) : $(OBJS) $(LIB)
+$(NAME) : $(LIB) $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(INCS) libasm/libasm.a
 
 $(OBJ_PATH)%.o : $(SRC_PATH)%.c
 	mkdir -p $(dir $@)
+	echo "$(YELLOW)""Compiling $<""$(NO_COLOR)"
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(INCS) -c $< -o $@  
 
 clean :
@@ -85,12 +87,12 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean 
-	make all --no-print-directory
+	$(MAKE) all --no-print-directory
 
 bonus : all
 
 libasm/libasm.a :
-	make -C ./libasm/ --no-print-directory
+	$(MAKE) -C ./libasm/ --no-print-directory
 
 -include $(DEPS)
 

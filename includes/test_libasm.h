@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libasm.h                                           :+:      :+:    :+:   */
+/*   test_libasm.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:51:21 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/15 18:14:08 by bsavinel         ###   ########.fr       */
+/*   Created: 2023/08/15 18:42:42 by bsavinel          #+#    #+#             */
+/*   Updated: 2023/08/15 18:42:59 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBASM_H
-# define LIBASM_H
+#ifndef TEST_LIBASM_H
+# define TEST_LIBASM_H
 
-# include <sys/types.h>
-
-size_t	ft_strlen();
-char	*ft_strcpy(char *dst, const char *src);
-int		ft_strcmp(const char *s1, const char *s2);
-ssize_t	ft_write(int fd, const void *buf, size_t count);
-ssize_t	ft_read(int fd, void *buf, size_t count);
-char	*ft_strdup(const char *s);
+void	test_strlen(void);
 
 #endif
