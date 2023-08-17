@@ -10,7 +10,6 @@ ft_strlen:
 
 loop:
 	inc rax
-	inc rdi
-	cmp byte [rdi], $0
+	cmp byte [rdi+rax], $0
 	jne loop
 	ret

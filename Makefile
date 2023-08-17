@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 15:16:24 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/17 14:34:04 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/08/17 18:39:03 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,9 @@ SRCS =	main.c			\
 		strlen_test.c	\
 		strcpy_test.c	\
 		strcmp_test.c	\
+		strdup_test.c	\
+		write_test.c	\
+		read_test.c		\
 
 ################################################################################
 #                               INCLUDES                             	       #

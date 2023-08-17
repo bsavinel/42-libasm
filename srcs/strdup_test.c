@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcpy_test.c                                      :+:      :+:    :+:   */
+/*   strdup_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 12:58:52 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/17 18:38:10 by bsavinel         ###   ########.fr       */
+/*   Created: 2023/08/17 15:17:34 by bsavinel          #+#    #+#             */
+/*   Updated: 2023/08/17 16:19:33 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 
 static void	test_routine(const char *str)
 {
-	char *dest = malloc(sizeof(char) * (strlen(str) + 1));
-	
+	char *ptr;
 	printf("%sTESTED STRING: \"%s\"%s\n", YELLOW, str, NO_COLOR);
-	bzero(dest, strlen(str) + 1);
-	printf("%sstrcpy    -> ret = %p dest = \"%s\" src = \"%s\"%s\n", BLUE, strcpy(dest, str), dest, str, NO_COLOR);
-	bzero(dest, strlen(str) + 1);
-	printf("%sft_strcpy -> ret = %p dest = \"%s\" src = \"%s\"%s\n", CYAN, ft_strcpy(dest, str), dest, str, NO_COLOR);
-	free(dest);
+	ptr = strdup(str);
+	printf("%sstrdup    = \"%s\"%s\n", BLUE, ptr, NO_COLOR);
+	free(ptr);
+	ptr = ft_strdup(str);
+	printf("%sft_strdup = \"%s\"%s\n", CYAN, ptr, NO_COLOR);
+	free(ptr);
 }
 
-void	test_strcpy(void)
+void	test_strdup(void)
 {
-	printf("%s###########################\n####    STRCPY TEST    ####\n###########################%s\n", PURPLE, NO_COLOR);
+	printf("%s###########################\n####    STRDUP TEST    ####\n###########################%s\n", PURPLE, NO_COLOR);
 	test_routine("");
 	test_routine("Hello World!");
 	test_routine("Ceci est un test");

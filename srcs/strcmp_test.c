@@ -6,7 +6,7 @@
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 13:52:23 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/17 14:03:33 by bsavinel         ###   ########.fr       */
+/*   Updated: 2023/08/17 15:24:39 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 static void	test_routine(const char *str1, const char *str2)
 {
-	printf("%sTESTED STRING: \"|%s| <=> |%s|\"%s\n", YELLOW, str1, str2, NO_COLOR);
+	printf("%sTESTED STRING: \"%s\" <=> \"%s\"%s\n", YELLOW, str1, str2, NO_COLOR);
 	printf("%sstrcmp    = %d %s\n", BLUE, strcmp(str1, str2), NO_COLOR);
 	printf("%sft_strcmp = %d %s\n", CYAN, ft_strcmp(str1, str2), NO_COLOR);
 }

@@ -6,6 +6,7 @@ ft_strcpy:
 	mov rax, rdi
 	cmp byte [rsi], 0
 	jne loop
+	mov byte [rdi], 0
 	ret
 
 loop:
@@ -15,4 +16,5 @@ loop:
 	inc rdi
 	cmp byte [rsi], 0 
 	jne loop
+	mov byte [rdi], 0
 	ret

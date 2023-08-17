@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 14:54:40 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/17 13:25:49 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/08/17 15:27:36 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,11 @@ SRCS =	ft_read.s	\
 		ft_strlen.s	\
 		ft_write.s
 
+################################################################################
+#                               INCLUDES                             	       #
+################################################################################
+
+INCS			=	-I ./includes/
 
 ################################################################################
 #                               PATH_TO_FILES                              	   #
@@ -71,7 +76,7 @@ $(NAME) : $(OBJS)
 $(OBJ_PATH)%.o : $(SRC_PATH)%.s
 	mkdir -p $(dir $@)
 	echo "$(YELLOW)""Compiling $<""$(NO_COLOR)"
-	$(AS) $(ASFLAGS) $< -o $@
+	$(AS) $(ASFLAGS) $< -o $@ $(INCS)
 
 clean :
 	echo "$(PURPLE)""Cleaning objects and dependence files""$(NO_COLOR)"
