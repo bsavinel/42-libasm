@@ -6,7 +6,7 @@
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 18:40:32 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/15 18:41:57 by bsavinel         ###   ########.fr       */
+/*   Updated: 2023/08/17 13:01:11 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int	main(void)
 {
 	test_strlen();
+	test_strcpy();
 	return (0);
 }

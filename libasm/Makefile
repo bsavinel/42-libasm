@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 14:54:40 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/15 16:57:47 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/08/17 13:25:49 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,8 @@ NAME = libasm.a
 #                           COMPILATION SETTING                        	       #
 ################################################################################
 
-AS			= gcc
-ASFLAGS		= -Wall -Wextra -Werror
-ASPPFLAGS	= -MMD
+AS			= nasm
+ASFLAGS		= -f elf64
 
 ################################################################################
 #                               SOURCE FILES                              	   #
@@ -72,7 +71,7 @@ $(NAME) : $(OBJS)
 $(OBJ_PATH)%.o : $(SRC_PATH)%.s
 	mkdir -p $(dir $@)
 	echo "$(YELLOW)""Compiling $<""$(NO_COLOR)"
-	$(AS) $(ASFLAGS) $(ASPPFLAGS) -c $< -o $@
+	$(AS) $(ASFLAGS) $< -o $@
 
 clean :
 	echo "$(PURPLE)""Cleaning objects and dependence files""$(NO_COLOR)"

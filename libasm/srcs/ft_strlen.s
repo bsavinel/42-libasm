@@ -1,14 +1,16 @@
-.globl ft_strlen
+global ft_strlen
+
+section .text
 
 ft_strlen:
-	xor %eax, %eax
-	cmpb $0, (%rdi)
+	xor rax, rax
+	cmp byte [rdi], $0
 	jne loop
 	ret
 
 loop:
-	inc %eax
-	inc %rdi
-	cmpb $0, (%rdi)
+	inc rax
+	inc rdi
+	cmp byte [rdi], $0
 	jne loop
 	ret
