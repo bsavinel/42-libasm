@@ -6,7 +6,7 @@
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 12:58:52 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/17 13:59:07 by bsavinel         ###   ########.fr       */
+/*   Updated: 2023/08/17 14:35:30 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	test_routine(const char *str)
 
 void	test_strcpy(void)
 {
-	printf("%s###########################\n####    STRLCPY TEST    ####\n###########################%s\n", PURPLE, NO_COLOR);
+	printf("%s###########################\n####    STRCPY TEST    ####\n###########################%s\n", PURPLE, NO_COLOR);
 	test_routine("");
 	test_routine("Hello World!");
 	test_routine("Ceci est un test");
