@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 15:16:24 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/17 18:39:03 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/08/18 16:25:50 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRCS =	main.c			\
 		strdup_test.c	\
 		write_test.c	\
 		read_test.c		\
+		atoi_base_test.c\
 
 ################################################################################
 #                               INCLUDES                             	       #
@@ -88,6 +89,7 @@ clean :
 	rm -rf $(OBJ_PATH)
 
 fclean : clean
+	$(MAKE) -C ./libasm/ fclean --no-print-directory
 	echo "$(PURPLE)""Cleaning executable""$(NO_COLOR)"
 	rm -rf $(NAME)
 

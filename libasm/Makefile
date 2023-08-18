@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 14:54:40 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/17 15:27:36 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/08/18 16:24:06 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,13 @@ ASFLAGS		= -f elf64
 #                               SOURCE FILES                              	   #
 ################################################################################
 
-SRCS =	ft_read.s	\
-		ft_strcmp.s	\
-		ft_strcpy.s	\
-		ft_strdup.s	\
-		ft_strlen.s	\
-		ft_write.s
+SRCS =	ft_read.s		\
+		ft_strcmp.s		\
+		ft_strcpy.s		\
+		ft_strdup.s		\
+		ft_strlen.s		\
+		ft_write.s		\
+		ft_atoi_base.s	\
 
 ################################################################################
 #                               INCLUDES                             	       #
