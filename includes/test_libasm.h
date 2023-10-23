@@ -6,7 +6,7 @@
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 18:42:42 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/18 16:21:29 by bsavinel         ###   ########.fr       */
+/*   Updated: 2023/10/23 11:04:47 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@ void	test_strcmp(void);
 void	test_strdup(void);
 void	test_write(void);
 void	test_read(void);
-void	test_atoi_base(void);
 
 #endif

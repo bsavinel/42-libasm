@@ -6,7 +6,7 @@
 /*   By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 12:58:52 by bsavinel          #+#    #+#             */
-/*   Updated: 2023/08/17 18:38:10 by bsavinel         ###   ########.fr       */
+/*   Updated: 2023/09/12 15:27:42 by bsavinel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ static void	test_routine(const char *str)
 	char *dest = malloc(sizeof(char) * (strlen(str) + 1));
 	
 	printf("%sTESTED STRING: \"%s\"%s\n", YELLOW, str, NO_COLOR);
-	bzero(dest, strlen(str) + 1);
+	memset(dest, '#', strlen(str) + 1);
 	printf("%sstrcpy    -> ret = %p dest = \"%s\" src = \"%s\"%s\n", BLUE, strcpy(dest, str), dest, str, NO_COLOR);
-	bzero(dest, strlen(str) + 1);
+	memset(dest, '#', strlen(str) + 1);
 	printf("%sft_strcpy -> ret = %p dest = \"%s\" src = \"%s\"%s\n", CYAN, ft_strcpy(dest, str), dest, str, NO_COLOR);
 	free(dest);
 }

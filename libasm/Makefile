@@ -6,7 +6,7 @@
 #    By: bsavinel <bsavinel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 14:54:40 by bsavinel          #+#    #+#              #
-#    Updated: 2023/08/18 16:24:06 by bsavinel         ###   ########.fr        #
+#    Updated: 2023/10/23 11:08:34 by bsavinel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,6 @@ SRCS =	ft_read.s		\
 		ft_strdup.s		\
 		ft_strlen.s		\
 		ft_write.s		\
-		ft_atoi_base.s	\
 
 ################################################################################
 #                               INCLUDES                             	       #
@@ -84,7 +83,7 @@ clean :
 	rm -rf $(OBJ_PATH)
 
 fclean : clean
-	echo "$(PURPLE)""Cleaning executable""$(NO_COLOR)"
+	echo "$(PURPLE)""Cleaning librarie""$(NO_COLOR)"
 	rm -rf $(NAME)
 
 re : fclean 
